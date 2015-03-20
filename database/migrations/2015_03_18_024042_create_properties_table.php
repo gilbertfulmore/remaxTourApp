@@ -19,7 +19,10 @@ class CreatePropertiesTable extends Migration {
             $table->integer('sq_feet');
             $table->string('district', 20);
 
-            $table->foreign('district')->references('name')->on('districts');
+            $table->foreign('district')
+                  ->references('name')
+                  ->on('districts')
+            ;
 		});
 	}
 

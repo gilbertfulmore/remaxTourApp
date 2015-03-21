@@ -16,7 +16,27 @@ class PagesController extends Controller {
             return view('pages.shadow');
         }
 
-        return 'You are not authenticated enough to see the shadow page!';
+        return view('pages.notAuthorisedMessage');
+    }
+
+    public function index() {
+
+        return view('pages.home');
+    }
+
+    public function help() {
+
+        return view('pages.help');
+    }
+
+    public function tours() {
+
+        if (Auth::user()) {
+
+            $name = Auth::user()->f_name;
+
+            return view('pages.tours')->with('name', $name);
+        }
     }
 
 }

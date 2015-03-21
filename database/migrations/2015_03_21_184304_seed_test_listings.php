@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDistrictsTable extends Migration {
+class SeedTestListings extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,11 +12,7 @@ class CreateDistrictsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('districts', function(Blueprint $table)
-		{
-			$table->string('name');
-            $table->string('code', 5)->primary();
-		});
+		//
 	}
 
 	/**
@@ -26,7 +22,7 @@ class CreateDistrictsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('districts');
+		//
 	}
 
 }

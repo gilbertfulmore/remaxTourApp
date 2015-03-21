@@ -17,12 +17,11 @@ class CreatePropertiesTable extends Migration {
 			$table->integer('id')->primary();
 			$table->string('address', 300);
             $table->integer('sq_feet');
-            $table->string('district', 20);
+            $table->string('district_code', 5);
 
-            $table->foreign('district')
-                  ->references('name')
-                  ->on('districts')
-            ;
+            $table->foreign('district_code')
+                  ->references('code')
+                  ->on('districts');
 		});
 	}
 

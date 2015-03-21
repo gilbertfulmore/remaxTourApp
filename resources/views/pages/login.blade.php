@@ -10,3 +10,8 @@
         <input type="submit" name="submit" value="Login"/>
     </p>
 </form>
+
+<p>
+    <h3>user #1 with password 'dangerzone' is an admin</h3><br/>
+    <h3>user #2 with password 'password' is an agent</h3>
+</p>

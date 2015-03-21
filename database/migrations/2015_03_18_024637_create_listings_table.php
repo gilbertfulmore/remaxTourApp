@@ -17,13 +17,13 @@ class CreateListingsTable extends Migration {
 			$table->string('mls', 8)->primary();
 			$table->integer('agent_id');
             $table->timestamp('create_on');
-            $table->integer('tour_id');
+            $table->unsignedInteger('tour_id');
             $table->integer('property_id');
             $table->string('status', 1);
 
-            //$table->foreign('agent_id')->references('id')->on('agents');
-            //$table->foreign('tour_id')->references('id')->on('tours');
-            //$table->foreign('property_id')->references('id')->on('properties');
+            $table->foreign('agent_id')->references('id')->on('agents');
+            $table->foreign('tour_id')->references('id')->on('tours');
+            $table->foreign('property_id')->references('id')->on('properties');
 		});
 	}
 

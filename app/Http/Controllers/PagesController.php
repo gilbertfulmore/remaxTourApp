@@ -19,12 +19,4 @@ class PagesController extends Controller {
         return 'You are not authenticated enough to see the shadow page!';
     }
 
-    public function agents() {
-
-    }
-
-	public function index() {
-
-        return view('pages.home');
-    }
 }

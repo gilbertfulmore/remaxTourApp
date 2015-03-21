@@ -8,6 +8,6 @@ Route::get('shadow', 'PagesController@shadow');
 
 Route::get('login', 'AuthenticationController@login');
 
-Route::get('logout', 'AuthenticationController@logout');
+Route::post('login', 'AuthenticationController@auth');
 
-Route::get('agents', 'PagesController@agents');
+Route::get('logout', 'AuthenticationController@logout');

@@ -9,12 +9,17 @@ class AuthenticationController extends Controller {
 
 	public function login() {
 
-        if (Auth::attempt(['id' => 7, 'password' => 'password'])) {
+        return view('pages.login');
+    }
 
-            return 'Win';
+    public function auth() {
+
+        if (Auth::attempt(['id' => $_POST["agent_id"], 'password' => $_POST['password']])) {
+
+            return "Login successful";
         }
 
-        return 'Fail';
+        return "Login Failed";
     }
 
     public function logout() {

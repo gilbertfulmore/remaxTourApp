@@ -16,7 +16,7 @@ class CreateListingsTable extends Migration {
 		{
 			$table->string('mls', 8)->primary();
 			$table->integer('agent_id');
-            $table->timestamp('create_on');
+            $table->timestamp('created_on');
             $table->unsignedInteger('tour_id');
             $table->integer('property_id');
             $table->string('status', 1);

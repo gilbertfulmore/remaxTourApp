@@ -1,9 +1,8 @@
-<!doctype html>
-<html>
-<head>
-    <title>Home Page</title>
-</head>
-<body>
+@extends('app')
+
+@section('title')Realty Tour App @stop
+
+@section('body')
 <div>
     <h1>Welcome to the RE/MAX site</h1>
     <p>
@@ -24,8 +23,10 @@
             <li>
                 <a href="shadow">Agent Authorization test page (shadow)</a>
             </li>
+            <li>
+                <a href="tours">View Tours</a>
+            </li>
         </ul>
     </p>
 </div>
-</body>
-</html>
+@stop

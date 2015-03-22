@@ -15,7 +15,7 @@ class AdminController extends Controller {
             return view('admin.agents');
         }
 
-        return view('pages.notAuthorisedMessage');
+        return view('errors.notAuthorisedMessage');
     }
 
     public function admin() {
@@ -25,7 +25,7 @@ class AdminController extends Controller {
             return view('admin.admin');
         }
 
-        return view('pages.notAuthorisedMessage');
+        return view('errors.notAuthorisedMessage');
     }
 
     public function register() {
@@ -51,6 +51,6 @@ class AdminController extends Controller {
             return view('admin.handleRegistration')->with('input', $input);
         }
 
-        return view('pages.notAuthorisedMessage');
+        return view('errors.notAuthorisedMessage');
     }
 }

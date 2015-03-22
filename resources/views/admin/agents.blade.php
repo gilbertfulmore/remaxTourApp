@@ -6,8 +6,7 @@
 <p>
     <h1>These are all the agents currently in the system</h1>
 </p>
-<?php   // Laravel API call, See http://laravel.com/docs/5.0/database for more info
-        
+<?php   // DB is a Laravel API call, See http://laravel.com/docs/5.0/database for more info
         $agents = DB::select('select * from agents');
 
         foreach ($agents as $agent) {

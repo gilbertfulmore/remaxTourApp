@@ -16,7 +16,7 @@ class PagesController extends Controller {
             return view('pages.shadow');
         }
 
-        return view('pages.notAuthorisedMessage');
+        return view('errors.notAuthorisedMessage');
     }
 
     public function index() {
@@ -33,10 +33,12 @@ class PagesController extends Controller {
 
         if (Auth::user()) {
 
-            $name = Auth::user()->f_name;
+            //$name = Auth::user()->f_name;
 
-            return view('pages.tours')->with('name', $name);
+            return view('pages.tours');
         }
+
+        return view('errors.notAuthorisedMessage');
     }
 
 }

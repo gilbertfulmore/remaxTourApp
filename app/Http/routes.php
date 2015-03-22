@@ -22,3 +22,5 @@ Route::get('shadow', 'PagesController@shadow');
 Route::get('help', 'PagesController@help');
 
 Route::get('tours', 'PagesController@tours');
+
+Route::get('map', 'PagesController@map');

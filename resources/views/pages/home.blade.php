@@ -26,6 +26,9 @@
             <li>
                 <a href="tours">View Tours</a>
             </li>
+            <li>
+                <a href="map">Map</a>
+            </li>
         </ul>
     </p>
 </div>

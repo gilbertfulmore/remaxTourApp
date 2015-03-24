@@ -1,30 +1,5 @@
 <?php
-    if(filter_input (INPUT_COOKIE, 'auth') == "1" || "2")
-    {
-        $loginblock = " ";
-    }
-    else
-    {
-        $loginblock = "
-                <div id='contentnav'>Login</div>
-                <div id='contentblock'>
-                    <form method='post' action='login.php'>
-                        <div id='loginbox'>
-                            User ID: <br/>
-                            <input type='text' name='ID' id='formstyle'/>
-                        </div>
-                        <div id='loginbox'>
-                            Password: <br/>
-                            <input type='password' name='PASSWORD' id='formstyle'/>
-                        </div>
-                        <div id='loginbox'>
-                            <br/><input type='submit' name='submit' value='login' id='formstyle'/>
-                        </div>
-                    </form>
-                </div>";
-    }
-
-    if(filter_input (INPUT_COOKIE, 'auth') == "1" ||  "2")
+    if(Auth::user())
     {
         $naviblock = ""
                 . "<ul>"
@@ -36,7 +11,11 @@
     }
     else
     {
-        $naviblock = "Please login below.";
+        $naviblock = ""
+                . "<ul>"
+                . "<li> <a href='home'>Home</a> </li>"
+                . "<li> <a href='login'>Login</a> </li>"
+                . "</ul>";
     }
 ?>
 
@@ -73,16 +52,13 @@
             }
             #nav ul
             {
-                list-style-type: none;
-                margin: 0px;
-                padding: 10px;
                 font-size: 1.0em;
                 font-variant: small-caps;
             }
             #nav li
             {
                 display: inline;
-                padding: 10px;
+                margin-right: 20px;
             }
             #block
             {
@@ -100,14 +76,15 @@
             #nav
             {
                 width: 100%;
-                height: 25px;
+                margin: auto;
+                height: 30px;
+                padding-top: 5px;
                 background: -webkit-linear-gradient(#6B8FB2, #C4D2E0);
                 background: -o-linear-gradient(#6B8FB2, #C4D2E0);
                 background: -moz-linear-gradient(#6B8FB2, #C4D2E0);
                 background: linear-gradient(#6B8FB2, #C4D2E0);
                 text-align: center;
                 font-size: 0.8em;
-                padding-top: 1px;
                 color: #FFFFFF;
                 clear: both;
             }
@@ -174,7 +151,6 @@
             <div id="nav">
                 <?php echo "$naviblock"; ?>
             </div>
-            <?php echo "$loginblock"; ?>
             @yield('body')
             <div id="nav">
                 page footer

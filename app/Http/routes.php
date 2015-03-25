@@ -23,4 +23,16 @@ Route::get('help', 'PagesController@help');
 
 Route::get('tours', 'PagesController@tours');
 
-Route::get('map', 'PagesController@map');
+Route::get('mylistings', 'PagesController@mylistings');
+
+Route::get('viewlisting', 'PagesController@viewlisting');
+
+Route::get('editlisting', 'PagesController@editlisting');
+
+Route::post('editlisting', 'PagesController@posteditlisting');
+
+Route::get('submitproperty', 'PagesController@submitproperty');
+
+Route::get('submit', 'PagesController@submit');
+
+Route::post('submit', 'PagesController@postsubmit');

@@ -9,9 +9,9 @@
 </head>
 <body>
 <p>
-<h1>This is the Admin's Agent Registration Page</h1>
+<h1>Edit User</h1>
 </p>
-<form method="post" action="register">
+<form method="post" action="edituser">
     <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
     <p>Agent ID<br/>
         <input type="number" name="id"/>

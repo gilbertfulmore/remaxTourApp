@@ -179,4 +179,9 @@ class PagesController extends Controller {
 
         return view('errors.notAuthorisedMessage');
     }
+
+    public function tourSummary() {
+
+        return view('pages.tourSummary');
+    }
 }

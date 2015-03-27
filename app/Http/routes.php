@@ -13,6 +13,22 @@ Route::get('admin/register', 'AdminController@register');
 
 Route::post('admin/register', 'AdminController@postregister');
 
+Route::get('admin/edituser', 'AdminController@edituser');
+
+Route::post('admin/edituser', 'AdminController@postedituser');
+
+Route::get('admin/edittours', 'AdminController@edittours');
+
+Route::post('admin/edittours', 'AdminController@postedittours');
+
+Route::any('admin/removetour', 'AdminController@postremovetour');
+
+Route::any('admin/markremove', 'AdminController@postmarkremove');
+
+Route::any('admin/marksubmit', 'AdminController@postmarksubmit');
+
+Route::any('admin/newtour', 'AdminController@postnewtour');
+
 Route::get('/', 'PagesController@index');
 
 Route::get('home', 'PagesController@index');
@@ -44,3 +60,5 @@ Route::get('submitproperty', 'PagesController@submitproperty');
 Route::get('submit', 'PagesController@submit');
 
 Route::post('submit', 'PagesController@postsubmit');
+
+Route::any('toursummary', 'PagesController@tourSummary');

@@ -5,62 +5,39 @@ Route::post('login', 'AuthenticationController@auth');
 
 Route::get('logout', 'AuthenticationController@logout');
 
-Route::get('admin', 'AdminController@admin');
+Route::group(['prefix' => 'admin'], function() {
 
-Route::get('admin/agents', 'AdminController@agents');
+    Route::get('/', 'AdminController@admin');
 
-Route::get('admin/register', 'AdminController@register');
+    Route::get('agents', 'AdminController@agents');
 
-Route::post('admin/register', 'AdminController@postregister');
+    Route::any('register', 'AdminController@register');
 
-Route::get('admin/edituser', 'AdminController@edituser');
+    Route::any('edituser', 'AdminController@edituser');
 
-Route::post('admin/edituser', 'AdminController@postedituser');
+    Route::any('edittours', 'AdminController@edittours');
 
-Route::get('admin/edittours', 'AdminController@edittours');
-
-Route::post('admin/edittours', 'AdminController@postedittours');
-
-Route::any('admin/removetour', 'AdminController@postremovetour');
-
-Route::any('admin/markremove', 'AdminController@postmarkremove');
-
-Route::any('admin/marksubmit', 'AdminController@postmarksubmit');
-
-Route::any('admin/newtour', 'AdminController@postnewtour');
+    Route::any('removetour', 'AdminController@removetour');
+});
 
 Route::get('/', 'PagesController@index');
 
 Route::get('home', 'PagesController@index');
 
-Route::get('shadow', 'PagesController@shadow');
-
 Route::get('help', 'PagesController@help');
 
 Route::get('tours', 'PagesController@tours');
 
-Route::get('mylistings', 'PagesController@mylistings');
-
-Route::post('viewlisting', 'PagesController@postmylistings');
+Route::any('listings', 'PagesController@listings');
 
 Route::post('confirm', 'PagesController@postconfirm');
-
-Route::get('search', 'PagesController@search');
 
 Route::post('search_mls', 'PagesController@postsearch_mls');
 
 Route::post('search_add', 'PagesController@postsearch_add');
 
-Route::get('viewlisting', 'PagesController@viewlisting');
-
-Route::post('editlisting', 'PagesController@posteditlisting');
-
-Route::get('submitproperty', 'PagesController@submitproperty');
-
-Route::get('submit', 'PagesController@submit');
-
-Route::post('submit', 'PagesController@postsubmit');
+Route::any('submit', 'PagesController@submit');
 
 Route::any('toursummary', 'PagesController@tourSummary');
 
-Route::post('map', 'PagesController@postmap');
+Route::any('map', 'PagesController@map');

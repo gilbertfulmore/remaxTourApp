@@ -35,8 +35,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $totals += array($estimate->mls, $estimate->price);
     }
 
-
-
     echo "<table><tr>";
     echo "<th>MLS</th>";
     echo "<th>Price Average</th>";

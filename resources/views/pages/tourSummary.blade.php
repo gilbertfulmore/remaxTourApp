@@ -4,6 +4,7 @@
 <h1>Tour Summary Page</h1>
 
 <p>
+
 <h3>Enter a Tour ID below</h3>
 </p>
 <form action="" method = "POST">

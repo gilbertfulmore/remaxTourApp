@@ -3,8 +3,9 @@
     {
         $naviblock = ""
                 . "<ul>"
-                . "<li> <a href='home'>Home</a> </li>"
+                . "<li> <a href='/'>Home</a> </li>"
                 . "<li> <a href='mylistings'>My Listings</a> </li>"
+                . "<li> <a href='submitproperty'>Submit Property</a> </li>"
                 . "<li> <a href='help'>Help</a> </li>"
                 . "<li> <a href='logout'>Logout</a> </li>"
                 . "</ul>";
@@ -13,7 +14,7 @@
     {
         $naviblock = ""
                 . "<ul>"
-                . "<li> <a href='home'>Home</a> </li>"
+                . "<li> <a href='/'>Home</a> </li>"
                 . "<li> <a href='login'>Login</a> </li>"
                 . "</ul>";
     }

@@ -1,3 +1,7 @@
+@extends('app')
+@section('title')Help Page
+@stop
+@section('body')
 <html>
 <head>
     <title>Agents Page</title>
@@ -21,3 +25,4 @@
 ?>
 </body>
 </html>
+@stop

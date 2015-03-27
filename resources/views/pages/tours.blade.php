@@ -1,3 +1,7 @@
+@extends('app')
+@section('title')Help Page
+@stop
+@section('body')
 <html>
 <head>
     <title>Tours Page</title>
@@ -29,3 +33,4 @@
 </p>
 </body>
 </html>
+@stop

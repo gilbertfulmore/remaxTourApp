@@ -1,3 +1,7 @@
+@extends('app')
+@section('title')Help Page
+@stop
+@section('body')
 <div id='contentnav'>Preview Tour</div>
 <div id='contentblock'>
     <ol>
@@ -95,3 +99,4 @@
         <p style='text-align:right;'><a href='#contentnav'>Top</a></p>
     </div>
 </div>
+@stop

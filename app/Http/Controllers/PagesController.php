@@ -33,8 +33,6 @@ class PagesController extends Controller {
 
         if (Auth::user()) {
 
-            //$name = Auth::user()->f_name;
-
             return view('pages.tours');
         }
 
@@ -51,18 +49,70 @@ class PagesController extends Controller {
         }
     }
 
-    public function viewlisting() {
+    public function postmylistings() {
 
         if (Auth::user()) {
 
-            return view('pages.viewlisting');
+            $prop_id = array(
+                ['prop_id' => $_POST['prop_id']]
+            );
+
+            return view('pages.viewlisting')->with('prop_id', $prop_id);
+        }
+
+        return view('errors.notAuthorisedMessage');
+    }
+
+    public function postconfirm() {
+
+        if (Auth::user()) {
+
+            $input = array(
+                ['prop_id' => $_POST['prop_id']]
+            );
+
+            return view('pages.handleconfirm')->with('input', $input);
+        }
+
+        return view('errors.notAuthorisedMessage');
+    }
+
+    public function postsearch_mls() {
+
+        if (Auth::user()) {
+
+            $agent_id = Auth::user()->id;
+
+            $input = array(
+                ['agent_id' => $agent_id],
+                ['mls' => $_POST['s_mls']]
+            );
+
+            return view('pages.search_mls')->with('input', $input);
         }
 
     }
 
-    public function editlisting() {
+    public function postsearch_add() {
 
         if (Auth::user()) {
+
+            $agent_id = Auth::user()->id;
+
+            $input = array(
+                ['agent_id' => $agent_id],
+                ['add' => $_POST['s_add']]
+            );
+
+            return view('pages.search_add')->with('input', $input);
+        }
+
+    }
+
+    public function viewlisting() {
+
+        if (Auth::user()) {
+
 
             return view('pages.viewlisting');
         }
@@ -74,7 +124,6 @@ class PagesController extends Controller {
         if (Auth::user()) {
 
             $input = array(
-                ['old_pid' => $_POST['old_pid']],
                 ['p_id' => $_POST['p_id']],
                 ['p_address' => $_POST['p_add']],
                 ['p_sqfeet' => $_POST['p_sq']],

@@ -25,9 +25,17 @@ Route::get('tours', 'PagesController@tours');
 
 Route::get('mylistings', 'PagesController@mylistings');
 
-Route::get('viewlisting', 'PagesController@viewlisting');
+Route::post('viewlisting', 'PagesController@postmylistings');
 
-Route::get('editlisting', 'PagesController@editlisting');
+Route::post('confirm', 'PagesController@postconfirm');
+
+Route::get('search', 'PagesController@search');
+
+Route::post('search_mls', 'PagesController@postsearch_mls');
+
+Route::post('search_add', 'PagesController@postsearch_add');
+
+Route::get('viewlisting', 'PagesController@viewlisting');
 
 Route::post('editlisting', 'PagesController@posteditlisting');
 

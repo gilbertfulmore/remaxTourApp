@@ -28,12 +28,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                          WHERE l.tour_id = ? AND
                                          l.agent_id = ? AND
                                          e.mls = l.mls', [$agent_id, $_POST['tour_id']]);
-    $totals = array(array());
+    $totals = array();
 
     foreach ($estimates as $estimate) {
 
-        ;
+        $totals += array($estimate->mls, $estimate->price);
     }
+
+
 
     echo "<table><tr>";
     echo "<th>MLS</th>";
@@ -44,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         echo "<tr>";
         echo "<td>".$listing->mls."</td>";
-
+        echo "";
         echo "</tr>";
     }
 

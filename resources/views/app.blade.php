@@ -126,9 +126,7 @@
             }
             #formstyle
             {
-                background-color : #FFFFFF;
-                border: 1px solid #6B8FB2;
-                width: 200px;
+
             }
             #tourTable
             {

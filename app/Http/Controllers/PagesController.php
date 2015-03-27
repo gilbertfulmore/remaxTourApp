@@ -184,4 +184,13 @@ class PagesController extends Controller {
 
         return view('pages.tourSummary');
     }
+
+    public function postmap() {
+        if (Auth::user()) {
+            $input = array(
+                ['prop_id' => $_POST['prop_id']]
+            );
+            return view('pages.map')->with('input', $input);
+        }
+    }
 }

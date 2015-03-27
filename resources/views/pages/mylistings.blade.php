@@ -62,7 +62,7 @@
         $searchblock = "<div id='contentnav'>Search</div><div id='contentblock'>";
         $searchblock .= "<p>MLS: <form method='post' action='search_mls'>
                             <input type='hidden' name='_token' value='".csrf_token()."'>
-                            <p><input type='number' name='s_mls'/></p>
+                            <p><input type='text' name='s_mls'/></p>
                             <p><input type='submit' name='src' value='Search'/></p>
                             </form></p>";
         $searchblock .= "<p>Address: <form method='post' action='search_add'>

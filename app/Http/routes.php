@@ -62,3 +62,5 @@ Route::get('submit', 'PagesController@submit');
 Route::post('submit', 'PagesController@postsubmit');
 
 Route::any('toursummary', 'PagesController@tourSummary');
+
+Route::post('map', 'PagesController@postmap');

@@ -141,6 +141,56 @@ class DatabaseSeeder extends Seeder {
                 'status' => 'c'
             )
         );
+
+        /////////////////////////////////// Estimates
+        DB::table('estimates')->insert(
+            array(
+                'mls' => 'D8WK3L2K',
+                'agent_id' => 1,
+                'created_at' => Carbon::now(),
+                'price' => 120000
+            )
+        );
+        DB::table('estimates')->insert(
+            array(
+                'mls' => 'D8WK3L2K',
+                'agent_id' => 2,
+                'created_at' => Carbon::now(),
+                'price' => 122500
+            )
+        );
+        DB::table('estimates')->insert(
+            array(
+                'mls' => 'F8K2J29S',
+                'agent_id' => 1,
+                'created_at' => Carbon::now(),
+                'price' => 150000
+            )
+        );
+        DB::table('estimates')->insert(
+            array(
+                'mls' => 'F8K2J29S',
+                'agent_id' => 2,
+                'created_at' => Carbon::now(),
+                'price' => 140000
+            )
+        );
+        DB::table('estimates')->insert(
+            array(
+                'mls' => '9DJ3N4M2',
+                'agent_id' => 1,
+                'created_at' => Carbon::now(),
+                'price' => 135000
+            )
+        );
+        DB::table('estimates')->insert(
+            array(
+                'mls' => '9DJ3N4M2',
+                'agent_id' => 2,
+                'created_at' => Carbon::now(),
+                'price' => 160000
+            )
+        );
 	}
 
 }

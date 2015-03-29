@@ -85,6 +85,8 @@ class PagesController extends Controller {
 
             return view('pages.tourSummary')->with('agent_id', $agent_id);
         }
+
+        return view('errors.notAuthorisedMessage');
     }
 
     public function map() {

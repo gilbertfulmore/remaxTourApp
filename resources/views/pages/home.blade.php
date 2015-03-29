@@ -29,6 +29,9 @@
             <li>
                 <a href="map">Map</a>
             </li>
+            <li>
+                <a href="toursummary">Tours Summary</a>
+            </li>
         </ul>
     </p>
 </div>

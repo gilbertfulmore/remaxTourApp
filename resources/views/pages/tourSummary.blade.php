@@ -16,7 +16,6 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    $agent_id = 1;
     $totals = array();
     $estCount = array();
     $maxes = array();

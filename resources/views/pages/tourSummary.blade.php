@@ -14,38 +14,60 @@
 </form>
 
 <?php
-use Illuminate\Support\Facades\Auth;
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    $agent_id = Auth::user()->id;
-    $data = array();
-
-    $listings = DB::select('SELECT mls FROM listings WHERE agent_id = ?',
-        [$agent_id]);
+    $agent_id = 1;
+    $totals = array();
+    $estCount = array();
+    $maxes = array();
 
     $estimates = DB::select('SELECT e.price, e.mls
-                                         FROM estimates e, listings l
-                                         WHERE l.tour_id = ? AND
-                                         l.agent_id = ? AND
-                                         e.mls = l.mls', [$agent_id, $_POST['tour_id']]);
-    $totals = array();
+                             FROM estimates e, listings l
+                             WHERE l.tour_id = ? AND
+                             l.agent_id = ? AND
+                             e.mls = l.mls', [$agent_id, $_POST['tour_id']]);
+
+    // Initialize all mls indexes
+    foreach ($estimates as $estimate) {
+
+        $estCount[$estimate->mls] = 0;
+        $totals[$estimate->mls] = 0;
+        $maxes[$estimate->mls] = 0;
+    }
+
+    // Tally all prices, calculates the max price entered.
+    foreach ($estimates as $estimate) {
+
+        $totals[$estimate->mls] += $estimate->price;
+        $estCount[$estimate->mls] += 1;
+
+        if ($estimate->price > $maxes[$estimate->mls]) {
+
+            $maxes[$estimate->mls] = $estimate->price;
+        }
+    }
+
+    // Table Header
+    echo "<table id='tourTable'><tr>";
+    echo "<th>MLS</th>";
+    echo "<th>Average Estimate</th>";
+    echo "<th>Highest Estimate</th></tr>";
+
+    $mlsUnique = array();
 
     foreach ($estimates as $estimate) {
 
-        $totals += array($estimate->mls, $estimate->price);
-    }
+        // Ensures all MLS numbers are only displayed once
+        if (!in_array($estimate->mls, $mlsUnique)) {
 
-    echo "<table><tr>";
-    echo "<th>MLS</th>";
-    echo "<th>Price Average</th>";
-    echo "<th>Price Max</th></tr>";
+            echo "<tr>";
+            echo "<td>".$estimate->mls."</td>";
+            echo "<td>".$totals[$estimate->mls] / $estCount[$estimate->mls]."</td>";
+            echo "<td>".$maxes[$estimate->mls]."</td>";
+            echo "</tr>";
+        }
 
-    foreach ($listings as $listing) {
-
-        echo "<tr>";
-        echo "<td>".$listing->mls."</td>";
-        echo "";
-        echo "</tr>";
+        array_push($mlsUnique, $estimate->mls);
     }
 
     echo "</table>";

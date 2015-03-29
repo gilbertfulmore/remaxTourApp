@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="515a5717-3844-4c58-b76f-f9b818d35c62" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/PagesController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/PagesController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/pages/tourSummary.blade.php" afterPath="$PROJECT_DIR$/resources/views/pages/tourSummary.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -29,43 +26,33 @@
     <favorites_list name="remaxTourApp" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.44122517">
-      <split-first>
-        <leaf>
-          <file leaf-file-name="routes.php" pinned="false" current="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="38" column="44" selection-start="1022" selection-end="1022" vertical-scroll-proportion="0.7610147" vertical-offset="0" max-vertical-offset="749">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="PagesController.php" pinned="false" current="true" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PagesController.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="93" column="1" selection-start="1616" selection-end="1616" vertical-scroll-proportion="0.8798398" vertical-offset="661" max-vertical-offset="1410">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="AdminController.php" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminController.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="57" column="15" selection-start="1222" selection-end="1222" vertical-scroll-proportion="-33.125" vertical-offset="0" max-vertical-offset="915">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file leaf-file-name="tourSummary.blade.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/pages/tourSummary.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="50" column="31" selection-start="1329" selection-end="1329" vertical-scroll-proportion="0.37917224" vertical-offset="466" max-vertical-offset="1215">
+              <folding>
+                <marker date="1427597182936" expanded="true" signature="500:723" placeholder="SELECT e.pri..estimates..." />
+                <marker date="1427597182936" expanded="true" signature="1329:1948" placeholder="..." />
+                <marker date="1427597182936" expanded="true" signature="1333:1439" placeholder="..." />
+                <marker date="1427597182936" expanded="true" signature="1646:1861" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tours.blade.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/pages/tours.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="5" selection-start="1150" selection-end="1150" vertical-scroll-proportion="-18.125" vertical-offset="0" max-vertical-offset="525">
+              <folding>
+                <marker date="1427490749411" expanded="true" signature="105:186" placeholder="select * fro..listings..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -94,10 +81,10 @@
         <option value="$PROJECT_DIR$/resources/views/app.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/mylistings.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/agents.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/pages/tourSummary.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/PagesController.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/tourSummary.blade.php" />
       </list>
     </option>
   </component>
@@ -142,7 +129,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -228,117 +214,10 @@
               <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="remaxTourApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="remaxTourApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="remaxTourApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="remaxTourApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="database" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="remaxTourApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="remaxTourApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="database" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="seeds" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="remaxTourApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="remaxTourApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="remaxTourApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="remaxTourApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Http" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="remaxTourApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="remaxTourApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Http" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -346,6 +225,10 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="options.lastSelected" value="editor.preferences.appearance" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -391,7 +274,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.121454544" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22909091" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -399,35 +282,35 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33549082" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.121454544" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -569,11 +452,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="748" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/handleSubmit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="735" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/pages/help.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="65" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1605" />
@@ -594,11 +472,6 @@
         <state line="18" column="9" selection-start="275" selection-end="275" vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="570" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/search_add.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1125" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/pages/submitproperty.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="748" />
@@ -611,158 +484,128 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/pages/map.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="18" selection-start="2958" selection-end="2958" vertical-scroll-proportion="0.0" vertical-offset="1170" max-vertical-offset="1260">
-          <folding />
-        </state>
+        <state line="78" column="18" selection-start="2958" selection-end="2958" vertical-scroll-proportion="0.0" vertical-offset="1170" max-vertical-offset="1260" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/pages/mylistings.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="48" selection-start="2950" selection-end="2950" vertical-scroll-proportion="0.0" vertical-offset="960" max-vertical-offset="1290">
-          <folding>
-            <marker date="1427490947819" expanded="true" signature="-1:-1" placeholder="select * fro..listings..." />
-          </folding>
-        </state>
+        <state line="64" column="48" selection-start="2950" selection-end="2950" vertical-scroll-proportion="0.0" vertical-offset="960" max-vertical-offset="1290" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/app.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="128" column="0" selection-start="3671" selection-end="3671" vertical-scroll-proportion="-18.708334" vertical-offset="1471" max-vertical-offset="2475">
+        <state line="128" column="0" selection-start="3671" selection-end="3671" vertical-scroll-proportion="-18.708334" vertical-offset="1471" max-vertical-offset="2475" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/user.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="5" selection-start="932" selection-end="932" vertical-scroll-proportion="0.87016577" vertical-offset="0" max-vertical-offset="724" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/agents.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="53" selection-start="342" selection-end="342" vertical-scroll-proportion="0.26933703" vertical-offset="0" max-vertical-offset="724" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/edittours.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.27988747" vertical-offset="199" max-vertical-offset="1200" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/registration.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="5" selection-start="966" selection-end="966" vertical-scroll-proportion="0.87016577" vertical-offset="0" max-vertical-offset="724" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/markremove.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="81" selection-start="87" selection-end="87" vertical-scroll-proportion="0.020026702" vertical-offset="0" max-vertical-offset="749" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/handleRegistration.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="721" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/marksubmit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="81" selection-start="87" selection-end="87" vertical-scroll-proportion="0.020026702" vertical-offset="0" max-vertical-offset="749" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/newtour.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="1" selection-start="339" selection-end="339" vertical-scroll-proportion="0.16021362" vertical-offset="0" max-vertical-offset="749" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/viewlisting.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="35" selection-start="119" selection-end="119" vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="780" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthenticationController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="708" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PagesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="93" column="1" selection-start="1616" selection-end="1616" vertical-scroll-proportion="0.8798398" vertical-offset="661" max-vertical-offset="1410" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="15" selection-start="1222" selection-end="1222" vertical-scroll-proportion="1.0614152" vertical-offset="0" max-vertical-offset="915" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="44" selection-start="1022" selection-end="1022" vertical-scroll-proportion="0.7610147" vertical-offset="0" max-vertical-offset="749" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="179" column="36" selection-start="4887" selection-end="4887" vertical-scroll-proportion="0.53938586" vertical-offset="2251" max-vertical-offset="3000">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/handleSubmit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="736">
+          <folding>
+            <marker date="1427487824759" expanded="true" signature="-1:-1" placeholder="insert into ..." />
+            <marker date="1427487824759" expanded="true" signature="-1:-1" placeholder="insert into ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/search_add.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.16168478" vertical-offset="119" max-vertical-offset="1125">
+          <folding>
+            <marker date="1427487824759" expanded="true" signature="-1:-1" placeholder="select * fro..listings..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/pages/tours.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="5" selection-start="1150" selection-end="1150" vertical-scroll-proportion="0.58077437" vertical-offset="0" max-vertical-offset="749">
+        <state line="29" column="5" selection-start="1150" selection-end="1150" vertical-scroll-proportion="-18.125" vertical-offset="0" max-vertical-offset="525">
           <folding>
-            <marker date="1427490749411" expanded="true" signature="-1:-1" placeholder="select * fro..listings..." />
-            <marker date="1427490749411" expanded="true" signature="-1:-1" placeholder="select * fro..listings..." />
+            <marker date="1427490749411" expanded="true" signature="105:186" placeholder="select * fro..listings..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/pages/tourSummary.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="5" selection-start="1037" selection-end="1037" vertical-scroll-proportion="0.48497853" vertical-offset="186" max-vertical-offset="885">
+        <state line="50" column="31" selection-start="1329" selection-end="1329" vertical-scroll-proportion="0.37917224" vertical-offset="466" max-vertical-offset="1215">
           <folding>
-            <marker date="1427496852578" expanded="true" signature="-1:-1" placeholder="SELECT mls F..listings..." />
-            <marker date="1427496852578" expanded="true" signature="-1:-1" placeholder="SELECT e.pri..estimates..." />
+            <marker date="1427597182936" expanded="true" signature="500:723" placeholder="SELECT e.pri..estimates..." />
+            <marker date="1427597182936" expanded="true" signature="1329:1948" placeholder="..." />
+            <marker date="1427597182936" expanded="true" signature="1333:1439" placeholder="..." />
+            <marker date="1427597182936" expanded="true" signature="1646:1861" placeholder="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/user.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="5" selection-start="932" selection-end="932" vertical-scroll-proportion="0.87016577" vertical-offset="0" max-vertical-offset="724">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/agents.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="53" selection-start="342" selection-end="342" vertical-scroll-proportion="0.26933703" vertical-offset="0" max-vertical-offset="724">
-          <folding>
-            <marker date="1427491021647" expanded="true" signature="-1:-1" placeholder="select * fro..agents..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/edittours.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.27988747" vertical-offset="199" max-vertical-offset="1200">
-          <folding>
-            <marker date="1427488410463" expanded="true" signature="-1:-1" placeholder="select * fro..listings..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/registration.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="5" selection-start="966" selection-end="966" vertical-scroll-proportion="0.87016577" vertical-offset="0" max-vertical-offset="724">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/markremove.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="81" selection-start="87" selection-end="87" vertical-scroll-proportion="0.020026702" vertical-offset="0" max-vertical-offset="749">
-          <folding>
-            <marker date="1427488486779" expanded="true" signature="-1:-1" placeholder="UPDATE listi..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/handleRegistration.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="721">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/marksubmit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="81" selection-start="87" selection-end="87" vertical-scroll-proportion="0.020026702" vertical-offset="0" max-vertical-offset="749">
-          <folding>
-            <marker date="1427488533399" expanded="true" signature="-1:-1" placeholder="UPDATE listi..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/newtour.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="1" selection-start="339" selection-end="339" vertical-scroll-proportion="0.16021362" vertical-offset="0" max-vertical-offset="749">
-          <folding>
-            <marker date="1427488568395" expanded="true" signature="-1:-1" placeholder="select * fro..tours..." />
-            <marker date="1427488568395" expanded="true" signature="-1:-1" placeholder="select * fro..listings..." />
-            <marker date="1427488568395" expanded="true" signature="-1:-1" placeholder="UPDATE listi..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/viewlisting.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="35" selection-start="119" selection-end="119" vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="780">
-          <folding>
-            <marker date="1427487824759" expanded="true" signature="-1:-1" placeholder="select * fro..listings..." />
-            <marker date="1427487824759" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1427487824759" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="192" column="10" selection-start="5261" selection-end="5261" vertical-scroll-proportion="3.6849132" vertical-offset="90" max-vertical-offset="3000">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthenticationController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="708">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="44" selection-start="1022" selection-end="1022" vertical-scroll-proportion="0.7610147" vertical-offset="0" max-vertical-offset="749">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="15" selection-start="1222" selection-end="1222" vertical-scroll-proportion="-33.125" vertical-offset="0" max-vertical-offset="915">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PagesController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="93" column="1" selection-start="1616" selection-end="1616" vertical-scroll-proportion="0.8798398" vertical-offset="661" max-vertical-offset="1410">
-          <folding />
         </state>
       </provider>
     </entry>

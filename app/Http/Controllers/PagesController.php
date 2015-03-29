@@ -63,7 +63,7 @@ class PagesController extends Controller {
 
             $agent_id = Auth::user()->id;
 
-            return view('pages.search_add')->with('input', $agent_id);
+            return view('pages.search_add')->with('agent_id', $agent_id);
         }
 
     }
@@ -79,7 +79,12 @@ class PagesController extends Controller {
 
     public function tourSummary() {
 
-        return view('pages.tourSummary');
+        if (Auth::user()) {
+
+            $agent_id = Auth::user()->id;
+
+            return view('pages.tourSummary')->with('agent_id', $agent_id);
+        }
     }
 
     public function map() {

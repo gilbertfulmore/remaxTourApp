@@ -109,6 +109,14 @@ class DatabaseSeeder extends Seeder {
                 'district_code' => 'BW'
             )
         );
+        DB::table('properties')->insert(
+            array(
+                'id' => 4040,
+                'address' => '2000 Sutherland',
+                'sq_feet' => 65000,
+                'district_code' => 'BL'
+            )
+        );
 
         /////////////////////////////////// LISTINGS
         DB::table('listings')->insert(
@@ -118,6 +126,16 @@ class DatabaseSeeder extends Seeder {
                 'created_on' => Carbon::now(),
                 'tour_id' => 1,
                 'property_id' => 1010,
+                'status' => 'S'
+            )
+        );
+        DB::table('listings')->insert(
+            array(
+                'mls' => 'AA1K3J4N',
+                'agent_id' => 1,
+                'created_on' => Carbon::now(),
+                'tour_id' => 1,
+                'property_id' => 4040,
                 'status' => 'S'
             )
         );
@@ -189,6 +207,22 @@ class DatabaseSeeder extends Seeder {
                 'agent_id' => 2,
                 'created_at' => Carbon::now(),
                 'price' => 160000
+            )
+        );
+        DB::table('estimates')->insert(
+            array(
+                'mls' => 'AA1K3J4N',
+                'agent_id' => 1,
+                'created_at' => Carbon::now(),
+                'price' => 250000
+            )
+        );
+        DB::table('estimates')->insert(
+            array(
+                'mls' => 'AA1K3J4N',
+                'agent_id' => 2,
+                'created_at' => Carbon::now(),
+                'price' => 275000
             )
         );
 	}

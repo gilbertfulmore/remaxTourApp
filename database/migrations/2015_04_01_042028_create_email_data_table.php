@@ -12,9 +12,9 @@ class CreateEmailDataTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('email_data', function(Blueprint $table)
+		Schema::create('email_templates', function(Blueprint $table)
         {
-            $table->string('name', 10)->primary();
+            $table->string('name', 20)->primary();
             $table->text('body');
             $table->string('subject', 100);
         });
@@ -27,7 +27,7 @@ class CreateEmailDataTable extends Migration {
 	 */
 	public function down()
 	{
-		//
+        Schema::drop('email_templates');
 	}
 
 }

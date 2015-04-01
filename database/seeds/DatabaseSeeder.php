@@ -225,6 +225,15 @@ class DatabaseSeeder extends Seeder {
                 'price' => 275000
             )
         );
+
+        /////////////////////////////////// Estimates
+        DB::table('email_data')->insert(
+            array(
+                'name' => 'default',
+                'subject' => 'RealSoft Automatic Email',
+                'body' => 'This is the body inside the Weekly Tour automated email'
+            )
+        );
 	}
 
 }

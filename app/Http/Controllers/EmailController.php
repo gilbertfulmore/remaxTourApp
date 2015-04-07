@@ -1,11 +1,10 @@
 <?php namespace App\Http\Controllers;
-/**
- * To Do: migrate custom emails from source code entry to database
- */
+
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\DB;
 
 class EmailController extends Controller {
 
@@ -14,13 +13,22 @@ class EmailController extends Controller {
 
         if (Auth::user() && Auth::user()->auth_level == 'admin') {
 
-            $message = 'Hello '.$_POST["f_name"].' '.$_POST["l_name"].', This is a notification '.
-                       'that an account has been created for you on the RE\\MAX tour App. '.
-                       'User ID: '.$_POST["id"].' Password:'.$_POST["password"];
+            $result = DB::select('select body from email_templates where name = \'accountCreation\'');
 
-            Mail::raw($message, function($mail)
-            {
-                $subject = 'RE\\MAX Account Creation Notification';
+            foreach($result as $results) {
+                $message = $results->body;
+            }
+
+            $message = str_replace('[f_name]',   $_POST['f_name'],   $message);
+            $message = str_replace('[l_name]',   $_POST['l_name'],   $message);
+            $message = str_replace('[id]',       $_POST['id'],       $message);
+            $message = str_replace('[password]', $_POST['password'], $message);
+
+            Mail::raw($message, function($mail) {
+                $result = DB::select('select subject from email_templates where name = \'accountCreation\'');
+                foreach($result as $results) {
+                    $subject = $results->subject;
+                }
                 $mail->to($_POST["email"])->subject($subject);
             });
 
@@ -33,13 +41,19 @@ class EmailController extends Controller {
 
         if (Auth::user()) {
 
-            $message = 'This is a reminder that your property submission will not be registered for '.
-                       'a future tour until you confirm that the information provided in the submission'.
-                       'is correct. property confirmations can be made on the "My Listings" page';
+            $result = DB::select('select body from email_templates where name = \'propertySubmission\'');
 
-            Mail::raw($message, function($mail)
-            {
-                $subject = 'RE\\MAX Property Confirmation Reminder';
+            foreach($result as $results) {
+                $message = $results->body;
+            }
+
+            Mail::raw($message, function($mail) {
+                $result = DB::select('select subject from email_templates where name = \'propertySubmission\'');
+
+                foreach($result as $results) {
+                    $subject = $results->subject;
+                }
+
                 $mail->to(Auth::user()->email)->subject($subject);
             });
 

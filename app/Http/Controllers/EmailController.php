@@ -9,14 +9,13 @@ use Illuminate\Support\Facades\Mail;
 
 class EmailController extends Controller {
 
-    /* Sends a email to the agent that the account is created for
-       -use by register.blade.php */
+    /* When a new account is created the new account owner is notified by email */
     public function accountCreation() {
 
         if (Auth::user() && Auth::user()->auth_level == 'admin') {
 
             $message = 'Hello '.$_POST["f_name"].' '.$_POST["l_name"].', This is a notification '.
-                       'that an account has been created for you on the RE\\MAX   bn App. '.
+                       'that an account has been created for you on the RE\\MAX tour App. '.
                        'User ID: '.$_POST["id"].' Password:'.$_POST["password"];
 
             Mail::raw($message, function($mail)
@@ -25,9 +24,11 @@ class EmailController extends Controller {
                 $mail->to($_POST["email"])->subject($subject);
             });
 
-            return view('admin.registration');
+            return 'Account Created Successfully! - <a href="register">Click here to continue</a>';
         }
     }
+
+    /* Reminds agent by email to confirm property listing */
     public function submitProperty() {
 
         if (Auth::user()) {
@@ -42,7 +43,7 @@ class EmailController extends Controller {
                 $mail->to(Auth::user()->email)->subject($subject);
             });
 
-            return view('pages.tours');
+            return 'Listing Submitted! - <a href="tours">Click here to continue</a>';
         }
     }
 }

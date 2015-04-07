@@ -11,7 +11,9 @@ Route::group(['prefix' => 'admin'], function() {
 
     Route::get('agents', 'AdminController@agents');
 
-    Route::any('register', 'AdminController@register');
+    Route::get('register', 'AdminController@register');
+
+    Route::post('register', 'EmailController@accountCreation');
 
     Route::any('edituser', 'AdminController@edituser');
 
@@ -38,7 +40,9 @@ Route::post('search_mls', 'PagesController@postsearch_mls');
 
 Route::post('search_add', 'PagesController@postsearch_add');
 
-Route::any('submit', 'PagesController@submit');
+Route::get('submit', 'PagesController@submit');
+
+Route::post('submit', 'EmailController@submitProperty');
 
 Route::any('toursummary', 'PagesController@tourSummary');
 

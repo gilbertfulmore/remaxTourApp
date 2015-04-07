@@ -40,7 +40,7 @@
                 <label>Email Template:</label>
                 <input type="text" name="template"
                         value="<?php echo $settings->template;?>"><br>
-
+                <h6>Setting the time, day and disabling the weekly email is currently not implemented</h6>
                 <label>Time:</label>
                 <input type="time" name="emailTime"><br>
 

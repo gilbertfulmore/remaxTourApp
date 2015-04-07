@@ -18,6 +18,8 @@ Route::group(['prefix' => 'admin'], function() {
     Route::any('edittours', 'AdminController@edittours');
 
     Route::any('removetour', 'AdminController@removetour');
+
+    Route::any('email_settings', 'AdminController@email_settings');
 });
 
 Route::get('/', 'PagesController@index');

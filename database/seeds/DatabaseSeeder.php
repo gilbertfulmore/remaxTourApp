@@ -226,12 +226,20 @@ class DatabaseSeeder extends Seeder {
             )
         );
 
-        /////////////////////////////////// Estimates
-        DB::table('email_data')->insert(
+        /////////////////////////////////// Emails
+        DB::table('email_templates')->insert(
             array(
                 'name' => 'default',
                 'subject' => 'RealSoft Automatic Email',
                 'body' => 'This is the body inside the Weekly Tour automated email'
+            )
+        );
+
+        DB::table('email_settings')->insert(
+            array(
+                'used_for' => 'weeklyTour',
+                'template' => 'default',
+                'enabled' => True
             )
         );
 	}

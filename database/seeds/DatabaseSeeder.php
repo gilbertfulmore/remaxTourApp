@@ -234,6 +234,20 @@ class DatabaseSeeder extends Seeder {
                 'body' => 'This is the body inside the Weekly Tour automated email'
             )
         );
+        DB::table('email_templates')->insert(
+            array(
+                'name' => 'accountCreation',
+                'subject' => 'Account Creation Email',
+                'body' => 'Sample Message: [f_name], [l_name], [id], [password] will auto complete'
+            )
+        );
+        DB::table('email_templates')->insert(
+            array(
+                'name' => 'propertySubmission',
+                'subject' => 'Property Submission Email',
+                'body' => 'This is the body inside the Property Submission automated email'
+            )
+        );
 
         DB::table('email_settings')->insert(
             array(

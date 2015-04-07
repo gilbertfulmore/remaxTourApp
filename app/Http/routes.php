@@ -32,7 +32,7 @@ Route::get('help', 'PagesController@help');
 
 Route::get('tours', 'PagesController@tours');
 
-Route::any('listings', 'PagesController@listings');
+Route::any('mylistings', 'PagesController@myListings');
 
 Route::post('confirm', 'PagesController@postconfirm');
 
@@ -40,9 +40,9 @@ Route::post('search_mls', 'PagesController@postsearch_mls');
 
 Route::post('search_add', 'PagesController@postsearch_add');
 
-Route::get('submit', 'PagesController@submit');
+Route::get('submitproperty', 'PagesController@submitProperty');
 
-Route::post('submit', 'EmailController@submitProperty');
+Route::post('submitproperty', 'EmailController@submitProperty');
 
 Route::any('toursummary', 'PagesController@tourSummary');
 

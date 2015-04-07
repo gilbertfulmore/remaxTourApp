@@ -29,9 +29,10 @@ class PagesController extends Controller {
         return view('errors.notAuthorisedMessage');
     }
 
-    public function listings() {
+    public function myListings() {
 
         //TODO
+        return 'This page is under construction - <a href="home">Click here return</a>';
     }
 
     public function postconfirm() {
@@ -68,11 +69,13 @@ class PagesController extends Controller {
 
     }
 
-    public function submit() {
+    public function submitProperty() {
 
         if (Auth::user()) {
 
-            return view('pages.submitproperty');
+            $agent_id = Auth::user()->id;
+
+            return view('pages.submitproperty')->with('agent_id', $agent_id);
         }
 
     }

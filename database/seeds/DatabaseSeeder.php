@@ -18,24 +18,39 @@ class DatabaseSeeder extends Seeder {
         /////////////////////////////////// DISTRICTS
         DB::table('districts')->insert(
             array(
-                'name' => 'Beaverdell-Carmi',
-                'code' => 'BE'
+                'name' => 'Lake Country Area',
+                'code' => 'LCU'
             )
         );
 
         DB::table('districts')->insert(
             array(
-                'name' => 'Black Mountain',
-                'code' => 'BL'
+                'name' => 'Kelowna North',
+                'code' => 'KNG'
             )
         );
 
         DB::table('districts')->insert(
             array(
-                'name' => 'Big White',
-                'code' => 'BW'
+                'name' => 'Kelowna South',
+                'code' => 'KSM'
             )
         );
+
+        DB::table('districts')->insert(
+            array(
+                'name' => 'West Kelowna',
+                'code' => 'WK'
+            )
+        );
+
+        DB::table('districts')->insert(
+            array(
+                'name' => 'Kelowna East',
+                'code' => 'RNS'
+            )
+        );
+
 
         /////////////////////////////////// AUTH LEVELS
         DB::table('auth_levels')->insert(
@@ -90,7 +105,7 @@ class DatabaseSeeder extends Seeder {
                 'id' => 1010,
                 'address' => '860 KLO',
                 'sq_feet' => 40000,
-                'district_code' => 'BW'
+                'district_code' => 'WK'
             )
         );
         DB::table('properties')->insert(
@@ -98,7 +113,7 @@ class DatabaseSeeder extends Seeder {
                 'id' => 2020,
                 'address' => '200 Gordon',
                 'sq_feet' => 65000,
-                'district_code' => 'BE'
+                'district_code' => 'WK'
             )
         );
         DB::table('properties')->insert(
@@ -106,7 +121,7 @@ class DatabaseSeeder extends Seeder {
                 'id' => 3030,
                 'address' => '493 Mission',
                 'sq_feet' => 30500,
-                'district_code' => 'BW'
+                'district_code' => 'RNS'
             )
         );
         DB::table('properties')->insert(
@@ -114,7 +129,7 @@ class DatabaseSeeder extends Seeder {
                 'id' => 4040,
                 'address' => '2000 Sutherland',
                 'sq_feet' => 65000,
-                'district_code' => 'BL'
+                'district_code' => 'KSM'
             )
         );
 
@@ -156,7 +171,7 @@ class DatabaseSeeder extends Seeder {
                 'created_on' => Carbon::now(),
                 'tour_id' => 2,
                 'property_id' => 3030,
-                'status' => 'c'
+                'status' => 'C'
             )
         );
 

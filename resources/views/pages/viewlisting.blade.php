@@ -7,42 +7,73 @@
 
     $listings = DB::select('select * from listings L, properties P where L.property_id = P.id and L.property_id = ?', [$prop_id]);
 
-    echo "<div class='contentheader'>View Property</div><div class='contentblock'>";
-
-    foreach ($listings as $listings) {
-        echo "<div class='datacontainer'>
-                        <div class='datahead'>MLS:</div>
-                        <div class='databody'>" . $listings->mls . "</div>
-                        <div class='datahead'>Address:</div>
-                        <div class='databody'>" . $listings->address . "</div>
-                        <div class='datahead'>Square Ft:</div>
-                        <div class='databody'>" . $listings->sq_feet . "</div>
-                        <div class='datahead'>Area:</div>
-                        <div class='databody'>" . $listings->district_code . "</div>
-                    </div>";
+    echo "<div class='contentheader'>Your Properties</div>
+                <div class='contentblock'>";
+    foreach ($listings as $listings)
+    {
+        echo "<table class='datatable'>";
+        echo "<tr><th>MLS:</th><td>".$listings->mls."</td></tr>
+                <tr><th>Address:</th><td>".$listings->address."</td></tr>
+                <tr><th>Area:</th><td>".$listings->district_code."</td></tr>";
+        $status = $listings->status;
+        switch($status)
+        {
+            case 'S':
+                $status = "Submitted";
+                break;
+            case 'C':
+                $status = "Confirmed";
+                break;
+            case 'R':
+                $status = "Removed";
+                break;
+            case 'T':
+                $status = "On Tour";
+                break;
+        }
+        if($listings->status == 'S')
+        {
+            $edit = "<form method='post' action='view_listing'>
+                            <input type='hidden' name='_token' value='".csrf_token()."'>
+                            <input type='hidden' name='prop_id' value='".$listings->property_id."'>
+                            <input type='submit' name='p_edit' value='Edit' style='width: 80px;'/></form>";
+            $confirm = "<form method='post' action='confirm'>
+                            <input type='hidden' name='_token' value='".csrf_token()."'>
+                            <input type='hidden' name='prop_id' value='".$listings->property_id."'>
+                            <input type='submit' name='p_conf' value='Confirm' style='width: 80px;'/></form>";
+        }
+        else
+        {
+            $edit = "";
+            $confirm = "";
+        }
+        echo "<tr><th>Status:</th><td>".$status."</td></tr>
+                <tr><td>".$edit."</td><td>".$confirm."</td></tr>";
+        echo "</table>";
     }
-    echo "</div>";
-
-    echo "<div class='contentheader'>Edit Property</div>
-    <div class='contentblock'>
-        <form method='POST' action='edit_listing'>
-            <input type='hidden' name='_token' value='".csrf_token()."'>
-            <input type='hidden' name='prop_id' value='".$prop_id."'>
-            <label>MLS: <input type='text' name='prop_mls' value='".$listings->mls."'></label><br/>
-            <label>Address: <input type='text' name='prop_add' value='".$listings->address."'></label><br/>
-            <label>Square feet: <input type='number' name='prop_sq' value='".$listings->sq_feet."'></label><br/>
-            <label>Sub-area: <select name='prop_dist'>
-                <option value='LCU'>Winfield, Ellison, Lake Country, Quail</option>
-                <option value='KNG'>Dilworth, Glenmore, North Glenmore, Kelowna North</option>
-                <option value='KSM'>Sprintfield, Spall, Mission, Southeast Kelowna, Kelowna South</option>
-                <option value='WK'>Westside</option>
-                <option value='RNS'>Rutland, Black Mountain, Joe Rich</option>
-            </select></label>
-
-            <p><input type='submit' name='p_save' value='Save Changes' id='formstyle'/></p>
-        </form>
-    </div>";
+    echo "
+                <div style='clear:both;'>Note: by confirming a property, you will no longer be able to make any changes.<br/>
+                If any changes need to be made to a confirmed property, please contact the office administrator.</div>
+            </div>";
+    echo "<div class='contentheader'>Search</div>
+                        <div class='contentblock'>
+                            <div class='formcontainer'>
+                                MLS:
+                                <form method='post' action='search_mls'>
+                                    <input type='hidden' name='_token' value='".csrf_token()."'>
+                                    <p><input type='text' name='s_mls'/></p>
+                                    <p><input type='submit' name='src' value='Search'/></p>
+                                </form>
+                                </div>
+                            <div class='formcontainer'>
+                                Address:
+                                <form method='post' action='search_add'>
+                                    <input type='hidden' name='_token' value='".csrf_token()."'>
+                                    <p><input type='text' name='s_add'/></p>
+                                    <p><input type='submit' name='src' value='Search'/></p>
+                                </form>
+                            </div>
+                        </div>";
     ?>
-
 
 @stop

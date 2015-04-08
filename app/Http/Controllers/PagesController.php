@@ -29,19 +29,27 @@ class PagesController extends Controller {
         return view('errors.notAuthorisedMessage');
     }
 
-    public function myListings() {
+    public function listings() {
 
-        //TODO
-        return 'This page is under construction - <a href="home">Click here return</a>';
+        if (Auth::user()) {
+
+            $agent_id = Auth::user()->id;
+
+            return view('pages.mylistings')->with('agent_id', $agent_id);
+        }
+
+        return view('errors.notAuthorisedMessage');
     }
 
     public function postconfirm() {
 
         if (Auth::user()) {
 
-            $agent_id = Auth::user()->id;
+            $input = array(
+                ['prop_id' => $_POST['prop_id']]
+            );
 
-            return view('pages.handleconfirm')->with('agent_id', $agent_id);
+            return view('pages.handleconfirm')->with('input', $input);
         }
 
         return view('errors.notAuthorisedMessage');
@@ -53,7 +61,12 @@ class PagesController extends Controller {
 
             $agent_id = Auth::user()->id;
 
-            return view('pages.search_mls')->with('agent_id', $agent_id);
+            $input = array(
+                ['agent_id' => $agent_id],
+                ['mls' => $_POST['s_mls']]
+            );
+
+            return view('pages.search_mls')->with('input', $input);
         }
 
     }
@@ -64,12 +77,17 @@ class PagesController extends Controller {
 
             $agent_id = Auth::user()->id;
 
-            return view('pages.search_add')->with('agent_id', $agent_id);
+            $input = array(
+                ['agent_id' => $agent_id],
+                ['add' => $_POST['s_add']]
+            );
+
+            return view('pages.search_add')->with('input', $input);
         }
 
     }
 
-    public function submitProperty() {
+    public function submit() {
 
         if (Auth::user()) {
 
@@ -101,4 +119,32 @@ class PagesController extends Controller {
             return view('pages.map')->with('agent_id', $agent_id);
         }
     }
+
+    public function view_listing() {
+
+        if (Auth::user()) {
+
+            $prop_id = $_POST["prop_id"];
+
+            return view('pages.viewlisting')->with('prop_id', $prop_id);
+        }
+
+    }
+
+    public function edit_listing() {
+        if (Auth::user()) {
+
+            $input = array(
+                ['p_id' => $_POST['prop_id']],
+                ['p_address' => $_POST['prop_add']],
+                ['p_sqfeet' => $_POST['prop_sq']],
+                ['p_mls' => $_POST['prop_mls']],
+                ['p_district_code' => $_POST['prop_dist']]
+            );
+
+            return view('pages.handleeditlisting')->with('input', $input);
+        }
+        return view('errors.notAuthorisedMessage');
+    }
+
 }

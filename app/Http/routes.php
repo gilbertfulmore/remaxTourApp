@@ -47,3 +47,7 @@ Route::post('submitproperty', 'EmailController@submitProperty');
 Route::any('toursummary', 'PagesController@tourSummary');
 
 Route::any('map', 'PagesController@map');
+
+Route::any('view_listing', 'PagesController@view_listing');
+
+Route::any('edit_listing', 'PagesController@edit_listing');

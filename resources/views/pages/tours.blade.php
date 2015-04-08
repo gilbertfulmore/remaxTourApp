@@ -4,32 +4,34 @@
 
 @section('body')
 
-    <div class='contentheader'>Submit New Property</div>
-    <div class='contentblock'>
-        <p>
-            <form method='post' action='submit'>
-                <input type='hidden' name='_token' value='<?php echo csrf_token(); ?>'>
-                <input type='hidden' name='agent_id' value='<?php echo $agent_id; ?>'>
-                <div class="formcontainer">Address: <br/>
-                    <input type='text' name='sub_add' id='formstyle'/>
-                </div>
-                <div class="formcontainer">MLS: <br/>
-                    <input type='text' name='sub_mls' id='formstyle'/>
-                </div>
-                <div class="formcontainer">Square Footage: <br/>
-                    <input type='text' name='sub_sqr' id='formstyle'/>
-                </div>
-                <div class="formcontainer">Sub-area: <br/>
-                    <select name='sub_dist' id='formstyle'>
-                        <option value='LCU'>Winfield, Ellison, Lake Country, Quail</option>
-                        <option value='KNG'>Dilworth, Glenmore, North Glenmore, Kelowna North</option>
-                        <option value='KSM'>Sprintfield, Spall, Mission, Southeast Kelowna, Kelowna South</option>
-                        <option value='WK'>Westside</option>
-                        <option value='RNS'>Rutland, Black Mountain, Joe Rich</option>
-                    </select>
-                </div>
-                <div style='clear:both; margin: 10px;'><input type='submit' name='submit_prop' value='Submit' id='formstyle'/></div>
-            </form>
-        </p>
-    </div>
+    <?php
+    $listings = DB::select('select * from listings L, properties P where L.property_id = P.id and tour_id = ?', [1]);
+    echo "<div class='contentheader'>Current Tour</div><div class='contentblock'>";
+    if (count($listings) < 1) {
+        echo "There are no tours";
+    } else {
+
+        foreach ($listings as $listing) {
+            echo "<table class='datatable'>
+                    <tr>
+                        <th>Address:</th>
+                        <td> " . $listing->address . "</td>
+                        <td rowspan='2'>
+                            <form method='post' action='map'>
+                                <input type='hidden' name='_token' value='" . csrf_token() . "'>
+                                <input type='hidden' name='prop_id' value='" . $listing->address . "'>
+                                <input type='submit' name='p_conf' value='View' class='databutton'/>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>MLS: </th>
+                        <td>" . $listing->mls . "</td>
+                    </tr>
+                </table>";
+        }
+
+    }
+    echo "</div>";
+    ?>
 @stop

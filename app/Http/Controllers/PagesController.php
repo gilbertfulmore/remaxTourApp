@@ -147,9 +147,11 @@ class PagesController extends Controller
 
         if (Auth::user()) {
 
-            $agent_id = Auth::user()->id;
+            $input = array(
+                ['add' => $_POST['prop_add']]
+            );
 
-            return view('pages.map')->with('agent_id', $agent_id);
+            return view('pages.map')->with('input', $input);
         }
     }
 

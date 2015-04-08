@@ -42,7 +42,7 @@ function loadMap($address) {
             </script>
             <script type="text/javascript">
                 function initialize() {
-                    var property = '.json_encode($property).'
+                    var property = '.json_encode($property).';
                     var mapOptions = {
                         center: {
                             lat: property[1],

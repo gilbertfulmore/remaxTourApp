@@ -19,7 +19,7 @@
                         <td rowspan='2'>
                             <form method='post' action='map'>
                                 <input type='hidden' name='_token' value='" . csrf_token() . "'>
-                                <input type='hidden' name='prop_id' value='" . $listing->address . "'>
+                                <input type='hidden' name='prop_add' value='" . $listing->address . "'>
                                 <input type='submit' name='p_conf' value='View' class='databutton'/>
                             </form>
                         </td>

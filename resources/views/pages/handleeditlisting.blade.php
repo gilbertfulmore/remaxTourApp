@@ -11,8 +11,8 @@
 
         DB::update('update listings set mls = ? where property_id = ?', [$input[3], $input[0]]);
 
-        $contentblock = "<div id='contentnav'>Edit Listing</div>
-                         <div id='contentblock'><p>Listing updated</p></div>";
+        $contentblock = "<div class='contentheader'>Edit Listing</div>
+                         <div class='contentblock'><p>Listing updated</p></div>";
 
     ?>
     <?php echo $contentblock; ?>

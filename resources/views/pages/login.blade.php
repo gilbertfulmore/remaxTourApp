@@ -2,21 +2,17 @@
 @section('title')Help Page
 @stop
 @section('body')
-<form method="post" action="login">
-    <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
-    <p>Agent ID<br/>
-        <input type="number" name="agent_id"/>
-    </p>
-    <p>Password<br/>
-        <input type="password" name="password"/>
-    </p>
-    <p>
-        <input type="submit" name="submit" value="Login"/>
-    </p>
-</form>
-
-<p>
-    <h3>user #1 with password 'dangerzone' is an admin</h3><br/>
-    <h3>user #2 with password 'password' is an agent</h3>
-</p>
+    <div class='contentheader'>User Login</div>
+    <div class='contentblock'>
+        <p>
+            user #1 with password 'dangerzone' is an admin<br/>
+            user #2 with password 'password' is an agent
+        </p>
+        <form method="post" action="login">
+            <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
+            <input type="number" name="agent_id" placeholder="agent id"/>
+            <input type="password" name="password" placeholder="password"/>
+            <p><input type="submit" name="submit" value="Login"/></p>
+        </form>
+    </div>
 @stop

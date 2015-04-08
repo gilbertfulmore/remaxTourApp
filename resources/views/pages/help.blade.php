@@ -2,8 +2,8 @@
 @section('title')Help Page
 @stop
 @section('body')
-<div id='contentnav'>Preview Tour</div>
-<div id='contentblock'>
+<div class='contentheader'>Preview Tour</div>
+<div class='contentblock'>
     <ol>
         <li>1.0 <a href='#intro'>Introduction</a></li>
         <li>2.0 <a href='#guide'>User's Guide</a>

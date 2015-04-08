@@ -2,31 +2,31 @@
     if(Auth::user())
     {
         $naviblock = "  <nav class='clearfix'>
+                            <a href='#' id='pull'>Menu</a>
                         <ul class='clearfix'>
                             <li> <a href='/'>Home</a> </li>
-                            <li> <a href='submitproperty'>Submit</a> </li>
-                            <li> <a href='mylistings'>My Listings</a> </li>
+                            <li> <a href='submit'>Submit</a> </li>
+                            <li> <a href='listings'>My Listings</a> </li>
                             <li> <a href='tours'>View Tours</a> </li>
                             <li> <a href='help'>Help</a> </li>
                             <li> <a href='logout'>Logout</a> </li>
                         </ul>
-                        <a href='#' id='pull'>Menu</a>
                         </nav>";
     }
     else
     {
         $naviblock = "  <nav class='clearfix'>
+                        <a href='#' id='pull'>Menu</a>
                         <ul class='clearfix'>
                             <li> <a href='/'>Home</a> </li>
                             <li> <a href='login'>Login</a> </li>
                         </ul>
-                        <a href='#' id='pull'>Menu</a>
                         </nav>";
     }
     if (Auth::user() && Auth::user()->auth_level == 'admin')
     {
         $adminblock = "<div class='contentblock'>
-                            <a href='admin'><div class='button'>Admin Panel</div></a>
+                            <div class='button'><a href='admin'>Admin Panel</a></div>
                         </div>";
     }
     else
@@ -89,6 +89,12 @@
             a
             {
                 text-decoration: none;
+                color: #000000;
+            }
+            .button a
+            {
+                text-decoration: none;
+                color: #FFFFFF;
             }
             #wrapper
             {
@@ -148,7 +154,7 @@
                 nav
                 {
                     height: auto;
-                    background-color: #A6BCD1;
+                    background-color: #95A9BC;
                 }
                 nav ul
                 {
@@ -223,8 +229,9 @@
             .contentblock
             {
                 width: 90%;
-                margin: auto;
+                margin: 10px auto 20px;
                 text-align: justify;
+                clear: both;
             }
             .contentheader
             {
@@ -232,7 +239,7 @@
                 font-size: 1.3em;
                 color: #2E2E2E;
                 border-bottom: 1px solid #CCCCCC;
-                margin-top: 10px;
+                margin-top: 20px;
                 padding-left: 10px;
             }
             .footer
@@ -264,21 +271,30 @@
             {
                 float: left;
                 margin: 10px 0px 0px 10px;
+                font-size: 0.8em;
+                color: #3D3D3D;
             }
-            .datacontainer
+            .datatable
             {
-                float: left;
-                margin: 10px 0px 0px 10px;
+                width: 100%;
+                margin: 10px;
+                border-bottom: 1px solid #CCCCCC;
             }
-            .dataTitle
+            .datatable th
             {
-                font-weight: bold;
-                background-color: #6B8FB2;
-                padding: 5px;
+                width: 90px;
             }
-            .dataBody
+            .databutton
             {
-                background-color: #A6BCD1;
+                width: 100px;
+                padding: 2px;
+            }
+            input, button, select, textarea
+            {
+                width: 150px;
+                border: 1px solid #6B8FB2;
+                border-radius: 10px;
+                margin: 5px;
                 padding: 5px;
             }
         </style>

@@ -15,4 +15,8 @@
             <p><input type="submit" name="submit" value="Login"/></p>
         </form>
     </div>
+<<<<<<< HEAD
 @stop
+=======
+@stop
+>>>>>>> 2e42508fb0dbed7fc3f654b10b78856441ae02c9

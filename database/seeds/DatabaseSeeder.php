@@ -34,6 +34,23 @@ class DatabaseSeeder extends Seeder {
             array(
                 'name' => 'Kelowna South',
                 'code' => 'KSM'
+<<<<<<< HEAD
+            )
+        );
+
+        DB::table('districts')->insert(
+            array(
+                'name' => 'West Kelowna',
+                'code' => 'WK'
+            )
+        );
+
+        DB::table('districts')->insert(
+            array(
+                'name' => 'Kelowna East',
+                'code' => 'RNS'
+=======
+>>>>>>> 2e42508fb0dbed7fc3f654b10b78856441ae02c9
             )
         );
 
@@ -50,6 +67,7 @@ class DatabaseSeeder extends Seeder {
                 'code' => 'RNS'
             )
         );
+
 
         /////////////////////////////////// AUTH LEVELS
         DB::table('auth_levels')->insert(
@@ -120,7 +138,11 @@ class DatabaseSeeder extends Seeder {
                 'id' => 3030,
                 'address' => '493 Mission',
                 'sq_feet' => 30500,
+<<<<<<< HEAD
                 'district_code' => 'KSM'
+=======
+                'district_code' => 'RNS'
+>>>>>>> 2e42508fb0dbed7fc3f654b10b78856441ae02c9
             )
         );
         DB::table('properties')->insert(
@@ -128,7 +150,11 @@ class DatabaseSeeder extends Seeder {
                 'id' => 4040,
                 'address' => '2000 Sutherland',
                 'sq_feet' => 65000,
+<<<<<<< HEAD
                 'district_code' => 'KNG'
+=======
+                'district_code' => 'KSM'
+>>>>>>> 2e42508fb0dbed7fc3f654b10b78856441ae02c9
             )
         );
 
@@ -237,6 +263,37 @@ class DatabaseSeeder extends Seeder {
                 'agent_id' => 2,
                 'created_at' => Carbon::now(),
                 'price' => 275000
+            )
+        );
+
+        /////////////////////////////////// Emails
+        DB::table('email_templates')->insert(
+            array(
+                'name' => 'default',
+                'subject' => 'RealSoft Automatic Email',
+                'body' => 'This is the body inside the Weekly Tour automated email'
+            )
+        );
+        DB::table('email_templates')->insert(
+            array(
+                'name' => 'accountCreation',
+                'subject' => 'Account Creation Email',
+                'body' => 'Sample Message: [f_name], [l_name], [id], [password] will auto complete'
+            )
+        );
+        DB::table('email_templates')->insert(
+            array(
+                'name' => 'propertySubmission',
+                'subject' => 'Property Submission Email',
+                'body' => 'This is the body inside the Property Submission automated email'
+            )
+        );
+
+        DB::table('email_settings')->insert(
+            array(
+                'used_for' => 'weeklyTour',
+                'template' => 'default',
+                'enabled' => True
             )
         );
 	}

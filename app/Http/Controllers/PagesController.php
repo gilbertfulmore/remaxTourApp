@@ -7,19 +7,23 @@ use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 
-class PagesController extends Controller {
+class PagesController extends Controller
+{
 
-    public function index() {
+    public function index()
+    {
 
         return view('pages.home');
     }
 
-    public function help() {
+    public function help()
+    {
 
         return view('pages.help');
     }
 
-    public function tours() {
+    public function tours()
+    {
 
         if (Auth::user()) {
 
@@ -29,7 +33,8 @@ class PagesController extends Controller {
         return view('errors.notAuthorisedMessage');
     }
 
-    public function listings() {
+    public function listings()
+    {
 
         if (Auth::user()) {
 
@@ -41,7 +46,8 @@ class PagesController extends Controller {
         return view('errors.notAuthorisedMessage');
     }
 
-    public function postconfirm() {
+    public function postconfirm()
+    {
 
         if (Auth::user()) {
 
@@ -55,7 +61,8 @@ class PagesController extends Controller {
         return view('errors.notAuthorisedMessage');
     }
 
-    public function postsearch_mls() {
+    public function postsearch_mls()
+    {
 
         if (Auth::user()) {
 
@@ -71,7 +78,8 @@ class PagesController extends Controller {
 
     }
 
-    public function postsearch_add() {
+    public function postsearch_add()
+    {
 
         if (Auth::user()) {
 
@@ -87,7 +95,8 @@ class PagesController extends Controller {
 
     }
 
-    public function submit() {
+    public function submitProperty()
+    {
 
         if (Auth::user()) {
 
@@ -98,7 +107,30 @@ class PagesController extends Controller {
 
     }
 
-    public function tourSummary() {
+    public function submit() {
+
+        if (Auth::user()) {
+
+            $input = array(
+                ['s_id' => $_POST['sub_ID']],
+                ['s_address' => $_POST['sub_add']],
+                ['s_sq_feet' => $_POST['sub_sqr']],
+                ['s_district_code' => $_POST['sub_dist']],
+                ['s_mls' => $_POST['sub_mls']],
+                ['s_agent_id' => $_POST['agent_id']],
+                ['s_created_on' => 'now()'],
+                ['s_tour_id' => '1'],
+                ['s_property_id' => $_POST['sub_ID']],
+                ['s_status' => 'S']
+            );
+
+            return view('pages.handleSubmit')->with('input', $input);
+        }
+        return view('errors.notAuthorisedMessage');
+    }
+
+    public function tourSummary()
+    {
 
         if (Auth::user()) {
 
@@ -110,7 +142,8 @@ class PagesController extends Controller {
         return view('errors.notAuthorisedMessage');
     }
 
-    public function map() {
+    public function map()
+    {
 
         if (Auth::user()) {
 
@@ -120,7 +153,8 @@ class PagesController extends Controller {
         }
     }
 
-    public function view_listing() {
+    public function view_listing()
+    {
 
         if (Auth::user()) {
 
@@ -131,7 +165,8 @@ class PagesController extends Controller {
 
     }
 
-    public function edit_listing() {
+    public function edit_listing()
+    {
         if (Auth::user()) {
 
             $input = array(
@@ -146,9 +181,4 @@ class PagesController extends Controller {
         }
         return view('errors.notAuthorisedMessage');
     }
-
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 2e42508fb0dbed7fc3f654b10b78856441ae02c9

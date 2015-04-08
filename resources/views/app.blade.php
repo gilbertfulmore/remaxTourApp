@@ -5,8 +5,8 @@
                             <a href='#' id='pull'>Menu</a>
                         <ul class='clearfix'>
                             <li> <a href='/'>Home</a> </li>
-                            <li> <a href='submit'>Submit</a> </li>
-                            <li> <a href='listings'>My Listings</a> </li>
+                            <li> <a href='submitproperty'>Submit</a> </li>
+                            <li> <a href='mylistings'>My Listings</a> </li>
                             <li> <a href='tours'>View Tours</a> </li>
                             <li> <a href='help'>Help</a> </li>
                             <li> <a href='logout'>Logout</a> </li>

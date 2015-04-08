@@ -24,6 +24,9 @@
         <a href="admin/edittours">Edit Tours</a>
     </li>
     <li>
+        <a href="admin/organize">Organize Tours</a>
+    </li>
+    <li>
         <a href="admin/edituser">Edit Users</a>
     </li>
 </ul>

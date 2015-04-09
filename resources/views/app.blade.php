@@ -7,11 +7,12 @@
                             <a href='#' id='pull'>Menu</a>
                         <ul class='clearfix'>
                             <li> <a href='/'>Home</a> </li>
-                            <li> <a href='submitproperty'>Submit</a> </li>
-                            <li> <a href='mylistings'>My Listings</a> </li>
-                            <li> <a href='tours'>View Tours</a> </li>
-                            <li> <a href='help'>Help</a> </li>
-                            <li> <a href='logout'>Logout</a> </li>
+                            <li> <a href='/submitproperty'>Submit</a> </li>
+                            <li> <a href='/mylistings'>My Listings</a> </li>
+                            <li> <a href='/tours'>View Tours</a> </li>
+                            <li> <a href='/help'>Help</a> </li>
+                            <li> <a href='/toursummary'>Tour Summary</a> </li>
+                            <li> <a href='/logout'>Logout</a> </li>
                         </ul>
                         </nav>";
     }
@@ -28,7 +29,7 @@
     if (Auth::user() && Auth::user()->auth_level == 'admin')
     {
         $adminblock = "<div class='contentblock'>
-                            <div class='button'><a href='admin'>Admin Panel</a></div>
+                            <div class='button'><a href='/admin'>Admin Panel</a></div>
                         </div>";
     }
     else
@@ -107,11 +108,22 @@
                 margin: auto;
                 background-color: #FFFFFF;
                 border-radius: 25px 20px 0px 0px;
+                position: relative;
             }
             #logo
             {
                 margin: auto;
                 padding: 20px;
+            }
+            #map-canvis
+            {
+                margin: auto;
+                width: 90%;
+                height: 90%;
+                min-height: 500px;
+                position: relative;
+                bottom: 5px;
+                top: 10px;
             }
             nav
             {

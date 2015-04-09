@@ -67,5 +67,7 @@ $addressIn = $address[0];
 @stop
 
 @section('body')
-    <div id='map-canvis' style='width: 100%; min-height: 100px; max-height: 500px;'></div>
+    <div class="contentblock">
+        <div id='map-canvis'></div>
+    </div>
 @stop

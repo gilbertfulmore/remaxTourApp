@@ -313,6 +313,7 @@
                 margin: 5px;
                 padding: 5px;
             }
+            @yield('style')
         </style>
     </head>
     <body>

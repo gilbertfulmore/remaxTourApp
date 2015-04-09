@@ -5,6 +5,7 @@
 @section('body')
 
     <?php
+    // This is open-sourced software licensed under the MIT license
 
     if (isset($_POST['setSubmit'])) {
         // "Save Settings" Button pushed

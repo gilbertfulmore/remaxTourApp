@@ -1,3 +1,5 @@
+<!-- This file is part of open-sourced software licensed under the MIT license -->
+
 <?php
 Route::get('login', 'AuthenticationController@login');
 

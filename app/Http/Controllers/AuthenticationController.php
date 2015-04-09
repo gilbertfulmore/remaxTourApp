@@ -18,7 +18,7 @@ class AuthenticationController extends Controller {
 
         if (Auth::attempt(['id' => $_POST["agent_id"], 'password' => $_POST['password']])) {
 
-            return "Login successful, <a href='home'>go home</a>";
+            return view('pages.home');
         }
 
         return "Login Failed, <a href='login'>Try Again</a>";

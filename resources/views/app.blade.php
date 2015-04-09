@@ -42,6 +42,7 @@
     <head>
         <meta charset="UTF-8">
         <title>@yield('title')</title>
+        @yield('head')
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
         <script>
             $(function()
@@ -65,6 +66,7 @@
                     }
                 });
             });
+            @yield('javascript')
         </script>
         <style>
             @import url('http://fonts.googleapis.com/css?family=Open+Sans+Condensed');

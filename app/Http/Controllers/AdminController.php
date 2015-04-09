@@ -122,4 +122,11 @@ class AdminController extends Controller {
 
         return view('errors.notAuthorisedMessage');
     }
+    
+    public function email_settings() {
+        if (Auth::user() && Auth::user()->auth_level == 'admin') {
+            return view('admin.email_settings');
+        }
+        return view('errors.notAuthorisedMessage');
+    }
 }

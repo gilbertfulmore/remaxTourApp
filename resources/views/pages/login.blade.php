@@ -6,10 +6,6 @@
 @section('body')
     <div class='contentheader'>User Login</div>
     <div class='contentblock'>
-        <p>
-            user #1 with password 'dangerzone' is an admin<br/>
-            user #2 with password 'password' is an agent
-        </p>
         <form method="post" action="login">
             <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
             <input type="number" name="agent_id" placeholder="agent id"/>

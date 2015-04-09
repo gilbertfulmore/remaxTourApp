@@ -46,7 +46,7 @@ Route::get('help', 'PagesController@help');
 
 Route::get('tours', 'PagesController@tours');
 
-Route::any('my_listings', 'PagesController@listings');
+Route::any('mylistings', 'PagesController@listings');
 
 Route::post('confirm', 'PagesController@postconfirm');
 

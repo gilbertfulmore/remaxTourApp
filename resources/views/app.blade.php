@@ -308,7 +308,7 @@
             <?php echo "$adminblock"; ?>
             @yield('body')
             <div class='footer'>
-                page footer, copyright
+
             </div>
         </div>
     </body>

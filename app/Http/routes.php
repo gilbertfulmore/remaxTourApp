@@ -54,7 +54,9 @@ Route::post('search_mls', 'PagesController@postsearch_mls');
 
 Route::post('search_add', 'PagesController@postsearch_add');
 
-Route::any('submit_property', 'PagesController@submit');
+Route::any('submitproperty', 'PagesController@submitproperty');
+
+Route::any('submit', 'PagesController@submit');
 
 Route::any('toursummary', 'PagesController@tourSummary');
 

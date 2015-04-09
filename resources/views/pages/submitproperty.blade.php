@@ -13,16 +13,16 @@
                 <input type='hidden' name='_token' value='<?php echo csrf_token(); ?>'>
                 <input type='hidden' name='agent_id' value='<?php echo $agent_id; ?>'>
                 <div class="formcontainer">Property ID: <br/>
-                    <input type='number' name='sub_ID'/>
+                    <input type='number' name='sub_ID' required/>
                 </div>
                 <div class="formcontainer">Address: <br/>
-                    <input type='text' name='sub_add'/>
+                    <input type='text' name='sub_add' required/>
                 </div>
                 <div class="formcontainer">MLS: <br/>
-                    <input type='text' name='sub_mls'/>
+                    <input type='text' name='sub_mls' required/>
                 </div>
                 <div class="formcontainer">Square Footage: <br/>
-                    <input type='text' name='sub_sqr'/>
+                    <input type='text' name='sub_sqr' required/>
                 </div>
                 <div class="formcontainer">Sub-area: <br/>
                     <select name='sub_dist'>

@@ -17,7 +17,7 @@
             echo "<table class='datatable'>
                     <tr>
                         <th>Address:</th>
-                        <td> " . $listing->address . "</td>
+                        <td width='100%'> " . $listing->address . "</td>
                         <td rowspan='2'>
                             <form method='post' action='map'>
                                 <input type='hidden' name='_token' value='" . csrf_token() . "'>

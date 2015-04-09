@@ -1,5 +1,7 @@
+<!-- This file is part of open-sourced software licensed under the MIT license -->
+
 @extends('app')
-@section('title')Help Page
+@section('title')Login Page
 @stop
 @section('body')
     <div class='contentheader'>User Login</div>

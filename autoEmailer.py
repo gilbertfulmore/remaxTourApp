@@ -1,5 +1,7 @@
 #!/usr/bin/python
 
+# This is open-sourced software licensed under the MIT license
+
 # MySQL Driver MUST be installed for this script to work. Install it using
 # $ sudo apt-get install python-mysqldb
 

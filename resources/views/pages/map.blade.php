@@ -1,3 +1,5 @@
+<!-- This file is part of open-sourced software licensed under the MIT license -->
+
 <?php
 $address = array_flatten($input);
 $address = $address[0];

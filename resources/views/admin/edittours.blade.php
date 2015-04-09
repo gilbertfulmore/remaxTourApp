@@ -1,3 +1,5 @@
+<!-- This file is part of open-sourced software licensed under the MIT license -->
+
 @extends('app')
 
 @section('title')Realty Tour App @stop
@@ -24,7 +26,12 @@ else
         $p_stat = $listing->status;
         if($p_stat == 'c')
         {
-            $p_edit = "<form method='post' action='viewlisting.php?p_id=".$listing->agent_id."'><input type='submit' name='p_edit' value='Edit' id='formstyle'/></form>";
+            $p_edit = "<form method='post' action='changetour'>"
+                    ."<input type='hidden' name='_token' value='".csrf_token()."'>"
+                    ."<input type='hidden' name='agent_id' value='".$listing->agent_id."'>"
+                    ."<input type='hidden' name='tour_id' value='".$listing->tour_id."'>"
+                    ."<input type='hidden' name='status' value='".$listing->status."'>"
+                    ."<input type='submit' name='p_confirm' value='Edit' id='formstyle'/></form>";
             $p_conf = "<form method='post' action='newtour'>"
                 ."<input type='hidden' name='_token' value='".csrf_token()."'>"
                 ."<input type='hidden' name='property_id' value='".$listing->property_id."'>"
@@ -39,7 +46,12 @@ else
                 ."<input type='submit' name='p_confirm' value='Downgrade' id='formstyle'/></form>";
         }
         elseif($p_stat == 't'){
-            $p_edit = "<form method='post' action='viewlisting.php?p_id=".$listing->agent_id."'><input type='submit' name='p_edit' value='Edit' id='formstyle'/></form>";
+            $p_edit = "<form method='post' action='changetour'>"
+                    ."<input type='hidden' name='_token' value='".csrf_token()."'>"
+                    ."<input type='hidden' name='agent_id' value='".$listing->agent_id."'>"
+                    ."<input type='hidden' name='tour_id' value='".$listing->tour_id."'>"
+                    ."<input type='hidden' name='status' value='".$listing->status."'>"
+                    ."<input type='submit' name='p_confirm' value='Edit' id='formstyle'/></form>";
             $p_conf = "<form method='post' action='removetour'>"
                 ."<input type='hidden' name='_token' value='".csrf_token()."'>"
                 ."<input type='hidden' name='property_id' value='".$listing->property_id."'>"

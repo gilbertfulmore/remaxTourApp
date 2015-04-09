@@ -1,5 +1,7 @@
 <?php namespace App\Http\Controllers;
 
+// This file is part of open-sourced software licensed under the MIT license
+
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;

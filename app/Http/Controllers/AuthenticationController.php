@@ -1,5 +1,7 @@
 <?php namespace App\Http\Controllers;
 
+// This file is part of open-sourced software licensed under the MIT license
+
 use Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Routing\Controller;

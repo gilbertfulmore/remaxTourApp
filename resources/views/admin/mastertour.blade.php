@@ -2,13 +2,13 @@
 $input = array_flatten($input);
 
 if($input[0] == 1){
-DB::insert('UPDATE listings SET status = "s" WHERE property_id = (?)', [$input[1]]);
+DB::insert('UPDATE listings SET status = "S" WHERE property_id = (?)', [$input[1]]);
 }
 elseif($input[0] == 2){
-DB::insert('UPDATE listings SET status = "r" WHERE property_id = (?)', [$input[1]]);
+DB::insert('UPDATE listings SET status = "R" WHERE property_id = (?)', [$input[1]]);
 }
 elseif($input[0] == 3){
-DB::insert('UPDATE listings SET status = "c", rank = 0, tour_id = 1 WHERE property_id = (?)', [$input[1]]);
+DB::insert('UPDATE listings SET status = "C", rank = 0, tour_id = 1 WHERE property_id = (?)', [$input[1]]);
 }
 
 ?>

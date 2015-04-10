@@ -7,7 +7,7 @@
 @section('body')
 
     <?php
-    $listings = DB::select('select * from listings L, properties P where L.property_id = P.id and tour_id = ?', [1]);
+    $listings = DB::select('select * from listings L, properties P where L.property_id = P.id and tour_id = ?', [2]);
     echo "<div class='contentheader'>Current Tour</div><div class='contentblock'>";
     if (count($listings) < 1) {
         echo "There are no tours";

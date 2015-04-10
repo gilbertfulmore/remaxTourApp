@@ -20,6 +20,7 @@ class CreateListingsTable extends Migration {
             $table->unsignedInteger('tour_id');
             $table->integer('property_id');
             $table->string('status', 1);
+            $table->integer('rank');
 
             $table->foreign('agent_id')->references('id')->on('agents');
             $table->foreign('tour_id')->references('id')->on('tours');

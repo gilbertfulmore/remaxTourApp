@@ -1,9 +1,4 @@
-@extends('app')
-
-@section('title')Realty Tour App @stop
-
-@section('body')
-    <?php
+<?php
     $input = array_flatten($input);
     $replace = DB::select('select * from listings where rank = (?)', [$input[1]]);
 
@@ -15,9 +10,20 @@
 
                 DB::update('update listings set rank = (?) where property_id = (?)', [$input[1], $input[0]]);
             }
-    $contentblock = "<div id='contentnav'>Submit New Property</div>
-                         <div id='contentblock'><p>Property submitted</p></div>";
     ?>
-    <?php echo $contentblock; ?>
+    <!-- This file is part of open-sourced software licensed under the MIT license -->
 
+    @extends('app')
+
+    @section('title')Realty Tour App @stop
+
+    @section('body')
+    <div class="contentheader">Changes Submitted</div>
+    <div class="contentblock">
+        <ul>
+            <li>
+                <a href="../admin/organize">Return to Organize Tours</a>
+            </li>
+        </ul>
+    </div>
 @stop

@@ -61,7 +61,7 @@ else
         }
         switch($p_stat)
         {
-            case 'S':
+            case 's':
                 $p_stat = "Submitted";
                 break;
             case 'c':

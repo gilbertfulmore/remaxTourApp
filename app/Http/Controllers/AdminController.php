@@ -49,8 +49,8 @@ class AdminController extends Controller {
     public function changetour() {
 
         if (Auth::user() && Auth::user()->auth_level == 'admin') {
-
-            return view('admin.changetour');
+            $input = array(['agent' => $_POST['agent_id']], ['tour' =>$_POST['tour_id']], ['stat' =>$_POST['status']]);
+            return view('admin.changetour')->with('input', $input);
         }
     }
 

@@ -9,7 +9,7 @@ $counter = DB::select('select * from listings where status = (?)', ['t']);
 $rankcount = count($counter) + 1;
 
 if (count($counting) < 20) {
-    DB::insert('UPDATE listings SET status = "t", tour_id = (?), rank = (?) WHERE property_id = (?)', [$p_stat, $rankcount, $input]);
+    DB::insert('UPDATE listings SET status = "T", tour_id = (?), rank = (?) WHERE property_id = (?)', [$p_stat, $rankcount, $input]);
 }
 
 ?>

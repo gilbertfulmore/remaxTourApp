@@ -7,14 +7,16 @@
     <?php
     $prop_arr = array();
     $count = 0;
-    $listings = DB::select('select * from listings where status = "t" and tour_id > 1');
+    $listings = DB::select('select * from listings where status = "t" and tour_id > 1 order by rank');
     $contentblock = "";
+    $mcount = count($listings);
+    $mcount++;
     if (count($listings) < 1) {
         echo "There are no tours";
     }
     else
     {
-        $contentblock = "<div id='contentnav'>Confirmed Properties</div>"
+        $contentblock = "<div id='contentnav'>Organize Properties</div>"
                 . "<div id='contentblock'>"
                 . "<table id='tourTable'><thead><tr><th>Agent ID</th><th>MLS</th><th>Property ID</th><th>Status</th><th>Rank</th><th>Modify</th></tr></thead><tbody>";
         foreach ($listings as $listing) {
@@ -24,12 +26,15 @@
                         ."<input type='hidden' name='_token' value='".csrf_token()."'>"
                         ."<input type='hidden' name='property_id' value='".$listing->property_id."'>"
                         ."<input type='hidden' name='rank' value='".$listing->rank."'>"
-                        ."<select name='res' id='formstyle'"
-                        ."<option value='1'>1</option>"
-                        ."<option value='2'>2</option>"
-                        ."<option value='3'>3</option>"
-                        ."<input type='submit' name='submit' value='reorganize' id='formstyle'/>"
+                        ."<select name='res' id='formstyle'";
+                while ($mcount > 0) {
+                    $p_edit .= "<option value='$mcount'>$mcount</option>";
+                    $mcount--;
+                    }
+                $p_edit .= "<input type='submit' name='submit' value='reorganize' id='formstyle'/>"
                         ."</select></form>";
+                $mcount = count($listings);
+                $mcount++;
             }
             switch($p_stat)
             {

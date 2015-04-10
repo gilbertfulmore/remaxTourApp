@@ -9,7 +9,7 @@
 <?php
 $prop_arr = array();
 $count = 0;
-$listings = DB::select('select * from listings where status = "c" or status = "t"');
+$listings = DB::select('select * from listings where status = "C" or status = "T"');
 $p_edit = "";
 $p_conf = "";
 $p_remt = "";
@@ -24,7 +24,7 @@ else
         . "<table id='tourTable'><thead><tr><th>Agent ID</th><th>MLS</th><th>Property ID</th><th>Status</th><th>Modify</th><th>Confirm Property</th><th>Remove Property</th><th>Downgrade Property</th></tr></thead><tbody>";
     foreach ($listings as $listing) {
         $p_stat = $listing->status;
-        if($p_stat == 'c')
+        if($p_stat == 'C')
         {
             $p_edit = "<form method='post' action='changetour'>"
                     ."<input type='hidden' name='_token' value='".csrf_token()."'>"
@@ -45,7 +45,7 @@ else
                 ."<input type='hidden' name='property_id' value='".$listing->property_id."'>"
                 ."<input type='submit' name='p_confirm' value='Downgrade' id='formstyle'/></form>";
         }
-        elseif($p_stat == 't'){
+        elseif($p_stat == 'T'){
             $p_edit = "<form method='post' action='changetour'>"
                     ."<input type='hidden' name='_token' value='".csrf_token()."'>"
                     ."<input type='hidden' name='agent_id' value='".$listing->agent_id."'>"
@@ -61,16 +61,16 @@ else
         }
         switch($p_stat)
         {
-            case 's':
+            case 'S':
                 $p_stat = "Submitted";
                 break;
-            case 'c':
+            case 'C':
                 $p_stat = "Confirmed";
                 break;
-            case 'r':
+            case 'R':
                 $p_stat = "Removed";
                 break;
-            case 't':
+            case 'T':
                 $p_stat = "On Tour";
                 break;
         }

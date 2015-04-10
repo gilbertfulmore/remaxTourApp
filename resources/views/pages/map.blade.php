@@ -68,7 +68,7 @@ $addressIn = $address[0];
 @section('style')
     .contentblock
     {
-        width: 100%;
+        width: 100%;    //overloads the normal 90%
         margin: 10px auto 20px;
         text-align: justify;
         clear: both;

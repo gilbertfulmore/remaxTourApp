@@ -1,2 +1,2 @@
 <?php
-DB::insert('UPDATE listings SET status = "r" WHERE property_id = (?)', [$input]);
+DB::insert('UPDATE listings SET status = "R" WHERE property_id = (?)', [$input]);

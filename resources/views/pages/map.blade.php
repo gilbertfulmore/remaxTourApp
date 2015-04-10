@@ -65,7 +65,15 @@ $addressIn = $address[0];
     }
     google.maps.event.addDomListener(window, "load", initialize);
 @stop
-
+@section('style')
+    .contentblock
+    {
+        width: 100%;
+        margin: 10px auto 20px;
+        text-align: justify;
+        clear: both;
+    }
+@stop
 @section('body')
     <div class="contentblock">
         <div id='map-canvis'></div>

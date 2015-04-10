@@ -11,3 +11,21 @@ $rankcount = count($counter) + 1;
 if (count($counting) < 20) {
     DB::insert('UPDATE listings SET status = "t", tour_id = (?), rank = (?) WHERE property_id = (?)', [$p_stat, $rankcount, $input]);
 }
+
+?>
+<!-- This file is part of open-sourced software licensed under the MIT license -->
+
+@extends('app')
+
+@section('title')Realty Tour App @stop
+
+@section('body')
+    <div class="contentheader">Changes Submitted</div>
+    <div class="contentblock">
+        <ul>
+            <li>
+                <a href="../admin/edittours">Return to Edit Tours</a>
+            </li>
+        </ul>
+    </div>
+@stop
